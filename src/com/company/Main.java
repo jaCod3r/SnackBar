@@ -12,11 +12,16 @@ public class Main {
 //        Customer 1 buys 3 of snack 4. Print Customer 1 Cash on hand. Print quantity of snack 4.
         //jane.buy(3, 4)
         //jane.getBalance
-        //vendingMachine.getQuantity(4)
+        //s4.getQuantity()
 
 //        Customer 1 buys 1 of snack 3. Print Customer 1 Cash on hand. Print quantity of snack 3.
+
+
 //        Customer 2 buys 2 of snack 4. Print Customer 2 Cash on Hand. Print quantity of snack 4.
+
+
 //        Customer 1 finds $10. Print Customer 1 Cash on Hand.
+
 //          Customer 1 buys 1 of snack 2. Print Customer 1 Cash on Hand. Print quantity of snack 2.
 //        Snack 3 gets 12 more. Print quantity of snack 3.
 //        Customer 2 buys 3 of snack 3. Print Customer 2 Cash on hand. Print quantity of snack 3.
@@ -38,8 +43,13 @@ public class Main {
         Snack s5 = new Snack(5, "Water", 20, 2.75, 2);
 
 
+        System.out.println(jane.buySnack(3, 4));
         System.out.println(jane.getCash());
-        System.out.println(bob.getCash());
 
+        System.out.println("Filling up snack 3 with " + s3.fill(12) + " snacks");
+        System.out.println("Snack 3 new quantity is: " + s3.getQuantity());
+
+        System.out.println("Jane finds $" + jane.findMoney(10));
+        System.out.println("Jane new total is $" + jane.getCash());
     }
 }

@@ -16,6 +16,16 @@ public class Customer {
     this.cash = cash;
   }
 
+  public double buySnack(int snackId, int quantity) {
+      return quantity;
+
+  }
+
+  public double findMoney(double extraCash) {
+      cash += extraCash;
+      return extraCash;
+  }
+
   public String getName() {
     return name;
   }

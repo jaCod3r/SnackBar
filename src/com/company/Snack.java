@@ -22,6 +22,11 @@ public class Snack {
     this.name = name;
   }
 
+  public int fill(int newQuantity) {
+    quantity += newQuantity;
+    return newQuantity;
+  }
+
   public int getQuantity() {
     return quantity;
   }
