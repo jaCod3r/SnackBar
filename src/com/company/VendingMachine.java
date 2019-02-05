@@ -1,11 +1,13 @@
 package com.company;
 
 public class VendingMachine {
-  private int id;
+  private static int maxId = 0;
+
+  public int id;
   private String name;
 
-  public VendingMachine(int id, String name) {
-    this.id = id;
+  public VendingMachine(String name) {
+    this.id = maxId++;
     this.name = name;
   }
 

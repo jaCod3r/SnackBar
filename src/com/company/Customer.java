@@ -10,14 +10,24 @@ public class Customer {
   private String name;
   private double cash;
 
-  public Customer(int id, String name, double cash) {
-    this.id = id;
+  public Customer(String name, double cash) {
+    this.id = maxId++;
     this.name = name;
     this.cash = cash;
   }
 
-  public double buySnack(int snackId, int quantity) {
-      return quantity;
+  public double buySnack(int quantity, double price) {
+
+      double cost = quantity * price;
+
+      if(cost <= cash) {
+        cash -= cost;
+
+      } else {
+        System.out.println("Not enough money");
+      }
+      return cost;
+
 
   }
 
